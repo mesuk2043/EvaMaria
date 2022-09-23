@@ -385,7 +385,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         f_caption = files.caption
         if CUSTOM_FILE_CAPTION:
             try:
-                f_caption = Join  @MesukTarikul1000 for more Movies.format(file_name='' if title is None else title,
+                f_caption = CUSTOM_FILE_CAPTION(file_name='' if title is None else title,
                                                        file_size='' if size is None else size,
                                                        file_caption='' if f_caption is None else f_caption)
             except Exception as e:
